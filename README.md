@@ -85,7 +85,7 @@ carts.json
 ]
 
 ⚠️ Archivos excluidos del repositorio
-Por indicación académica:
+Por indicación de la consigna
 
 - La carpeta node_modules/ está excluida mediante .gitignore.
 - Si se solicita, también se puede excluir products.json y carts.json para evitar subir datos de prueba.
