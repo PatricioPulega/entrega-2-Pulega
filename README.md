@@ -32,58 +32,7 @@ Este repositorio contiene la **pre-entrega del proyecto backend** para e-commerc
   Devuelve todos los productos.
 - POST /api/products
   Crea un nuevo producto.
-  Body ejemplo:
-  {
-  "title": "Teclado mecánico",
-  "description": "Teclado RGB con switches azules",
-  "price": 8500,
-  "stock": 10,
-  "category": "periféricos"
-  }
-- PUT /api/products/:pid
-  Modifica un producto por ID.
-- DELETE /api/products/:pid
-  Elimina un producto por ID.
-
-🔹 Carritos
-
-- POST /api/carts
-  Crea un nuevo carrito.
-- GET /api/carts/:cid
-  Devuelve los productos de un carrito.
-- POST /api/carts/:cid/product/:pid
-  Agrega un producto al carrito.
-  Body ejemplo:
-  {
-  "quantity": 3
-  }
-
-📄 Ejemplo de datos persistidos
-products.json
-[
-{
-"id": "2625f4d4-58df-4aef-b8aa-8ab3c29125c6",
-"title": "Teclado mecánico",
-"description": "Teclado RGB con switches azules",
-"price": 8500,
-"stock": 10,
-"category": "periféricos"
-}
-]
-
-carts.json
-[
-{
-"id": "8dcf8baf-09ef-4d22-bd10-2ccff986b5c0",
-"products": [
-{
-"product": "2625f4d4-58df-4aef-b8aa-8ab3c29125c6",
-"quantity": 3
-}
-]
-}
-]
-
+  
 ⚠️ Archivos excluidos del repositorio
 Por indicación de la consigna
 
