@@ -74,6 +74,20 @@ app.post("/api/carts/:cid/product/:pid", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+app.get("/api/products/:pid", async (req, res) => {
+  try {
+    const pid = req.params.pid;
+    const products = await productManager.getProduct();
+    const product = products.find((p) => p.id === pid);
+    if (!product) {
+      return res.status(404).json({ error: "Producto no encontrado" });
+    }
+    res.status(200).json({ message: "Producto encontrado", product });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 
 const PORT = 8080;
 app.listen(PORT, () => {
