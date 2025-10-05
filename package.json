@@ -1,17 +1,19 @@
 {
-  "name": "entrega-1",
+  "name": "entrega-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "express-handlebars": "^8.0.3",
+    "nodemon": "^3.1.10",
+    "socket.io": "^4.8.1"
   }
 }

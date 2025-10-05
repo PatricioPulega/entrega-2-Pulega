@@ -26,7 +26,7 @@ class CartManager {
       );
       return newCart;
     } catch (error) {
-      throw new Error("Error al crear al carrito: " + error.message);
+      throw new Error("Error al crear el carrito: " + error.message);
     }
   }
   async addProductInCart(cid, pid, quantity) {
