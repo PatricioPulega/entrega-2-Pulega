@@ -1,43 +1,68 @@
-# 🛒 Pre-entrega 1 - Backend
+# 📦 Backend E-commerce | Entrega 2
 
-Este repositorio contiene la **pre-entrega del proyecto backend** para e-commerce, desarrollado con Node.js y Express. La lógica está encapsulada en clases (`ProductManager` y `CartManager`), y la persistencia se realiza mediante archivos `.json`. Todos los endpoints fueron probados en Postman y cumplen con la consigna académica.
-
-🔗 Repositorio: [https://github.com/PatricioPulega/Pre-entrega-1-Backend](https://github.com/PatricioPulega/Pre-entrega-1-Backend)
-
----
+Proyecto académico para el curso de Backend, que integra persistencia con archivos, motor de plantillas Handlebars, y comunicación en tiempo real con WebSocket. Validado contra consigna y estructurado profesionalmente.
 
 ## 📁 Estructura del proyecto
 
-├── app.js ├── productManager.js ├── cartManager.js ├── products.json ├── carts.json ├── package.json ├── package-lock.json ├── .gitignore
+
+src/ ├── routes/ │   ├── products.router.js │   ├── carts.router.js │   └── views.router.js ├── views/ │   ├── layouts/ │   │   └── main.handlebars │   ├── home.handlebars │   └── realTimeProducts.handlebars ├── public/ │   └── js/ │       └── realtime.js ├── managers/ │   ├── ProductManager.js │   └── CartManager.js ├── utils/ │   └── validations.js ├── data/ │   ├── products.json │   └── carts.json └── app.js
 
----
+## 🚀 Tecnologías utilizadas
 
-## 🚀 Cómo ejecutar el proyecto
+- Node.js + Express
+- Handlebars (motor de plantillas)
+- WebSocket (Socket.io)
+- Persistencia con archivos JSON
+- Modularización con routers
+- Validaciones y manejo de errores
 
-1. Cloná el repositorio:
-   ```bash
-   git clone https://github.com/PatricioPulega/Pre-entrega-1-Backend.git
+## 🧩 Funcionalidades
 
+### Productos
+- Listado de productos desde archivo JSON
+- Agregado, edición y eliminación vía endpoints REST
+- Renderizado dinámico con Handlebars
+- Actualización en tiempo real con WebSocket
 
-- Instalá las dependencias:
-npm install
-- Ejecutá el servidor:
-npm start
-📌 El servidor se inicia en el puerto 8080.🔗 Endpoints disponibles🔹 Productos- GET /api/products
-Devuelve todos los productos.
-- POST /api/products
-Crea un nuevo producto.
-- PUT /api/products/:pid
-Modifica un producto por ID.
-- DELETE /api/products/:pid
-Elimina un producto por ID.
-🔹 Carritos- POST /api/carts
-Crea un nuevo carrito.
-- GET /api/carts/:cid
-Devuelve los productos de un carrito.
-- POST /api/carts/:cid/product/:pid
-Agrega un producto al carrito con cantidad.
-⚠️ Archivos excluidos del repositorioPor indicación de la consigna:- La carpeta node_modules/ está excluida mediante .gitignore.
-- Si se solicita, también se puede excluir products.json y carts.json para evitar subir datos de prueba.
-📎 AutorPatricio Pulega
-Septiembre 2025
+### Carrito
+- Creación de carrito
+- Agregado de productos por ID
+- Persistencia en archivo `carts.json`
+
+### Vistas
+- `/home`: muestra productos con Handlebars
+- `/realtimeproducts`: permite agregar productos y ver actualizaciones en tiempo real
+
+## 📡 WebSocket
+
+- Conexión establecida desde `realtime.js`
+- Emisión de eventos al agregar productos
+- Actualización automática del listado en la vista
+
+## 📌 Validaciones
+
+- Validación de campos obligatorios
+- Manejo de errores con mensajes claros
+- Separación de lógica en `utils/validations.js`
+
+## 📚 Consigna validada
+
+- ✅ Persistencia con archivos
+- ✅ Motor de plantillas Handlebars
+- ✅ WebSocket para productos en tiempo real
+- ✅ Estructura modular con routers
+- ✅ Documentación clara y profesional
+
+## 🛠️ Scripts
+
+```bash
+npm run dev
+
+
+Usa nodemon para desarrollo en caliente.
+🧪 Test manual
+- Se validó cada endpoint con Postman
+- Se probó la vista en navegador
+- Se verificó persistencia en archivos
+🏛️ Autor
+Patricio Pulega Octubre 2025
