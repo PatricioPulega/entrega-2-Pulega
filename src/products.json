@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": "84c92763-aa29-4d62-b37c-663197fac397",
+    "title": "Teclado Mecánico RGB",
+    "description": "Teclado compacto con retroiluminación RGB ideal para gaming.",
+    "price": 60522.95,
+    "thumbnail": "/img/teclado.jpg",
+    "code": "TEC-RGB-001",
+    "stock": 25
+  },
+  {
+    "id": "8ec0fa73-a583-4605-a156-a9e1ccda9d49",
+    "title": "Auriculares Bluetooth JBL",
+    "description": "Auriculares inalámbricos con sonido envolvente y micrófono integrado.",
+    "price": 52414.5,
+    "thumbnail": "/img/auriculares.jpg",
+    "code": "AUD-JBL-002",
+    "stock": 40
+  },
+  {
+    "id": "0c5823d0-7008-4247-94e1-c784fbc9cde2",
+    "title": "Notebook Apple MacBook Air",
+    "description": "Notebook ultradelgada con chip M2, 16GB RAM, 256GB SSD.",
+    "price": 2097144.8,
+    "thumbnail": "/img/macbook.jpg",
+    "code": "NB-APL-MBA",
+    "stock": 10
+  },
+  {
+    "id": "ed7ccf3a-d046-4e3c-bec4-583c397878ae",
+    "title": "Joystick PS5 DualSense",
+    "description": "Control inalámbrico con gatillos adaptativos y vibración háptica.",
+    "price": 146000.42,
+    "thumbnail": "/img/joystick.jpg",
+    "code": "JOY-PS5-DS",
+    "stock": 30
+  },
+  {
+    "id": "412f2cab-fe48-4de2-8d68-d88611756a3b",
+    "title": "Smart TV Stick Roku HD",
+    "description": "Dispositivo para convertir cualquier TV en Smart con acceso a streaming.",
+    "price": 49399.25,
+    "thumbnail": "/img/roku.jpg",
+    "code": "TV-RKU-HD",
+    "stock": 50
+  }
+]

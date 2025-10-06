@@ -104,3 +104,25 @@ em {
 .btn:hover {
   background-color: #0056b3;
 }
+.product-grid {
+  display: block;
+  padding: 10px;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.product-card img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}

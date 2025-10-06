@@ -1,12 +1,16 @@
-<h2>🛍️ Productos disponible</h2>
-<ul>
+<h2>🛍️ Productos disponibles</h2>
+
+<div class="product-grid">
   {{#each products}}
-    <li>
-      <strong>{{this.title}}</strong> - ${{this.price}}  
-      <br />
-      <em>{{this.description}}</em>  
-      <br />
-      Código: {{this.code}} | Stock: {{this.stock}} | ID: {{this.id}}
-    </li>
+    <div class="product-card">
+      <img src="{{this.thumbnail}}" alt="{{this.title}}" />
+      <h3>{{this.title}}</h3>
+      <p><em>{{this.description}}</em></p>
+      <p><strong>Precio:</strong> ${{this.price}}</p>
+      <p><strong>Código:</strong> {{this.code}}</p>
+      <p><strong>Stock:</strong> {{this.stock}}</p>
+      <p><strong>ID:</strong> {{this.id}}</p>
+    </div>
   {{/each}}
-</ul>
+</div>
+
