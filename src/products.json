@@ -34,5 +34,14 @@
     "thumbnail": "/img/joystick.jpg",
     "code": "JOY-PS5-DS",
     "stock": 30
+  },
+  {
+    "id": "f82e2a4b-8e11-4b9e-8cc9-ada415229bac",
+    "title": "Smart TV Stick Roku HD",
+    "description": "Dispositivo para convertir cualquier TV en Smart con acceso a streaming.",
+    "price": 49399.25,
+    "thumbnail": "/img/roku.jpg",
+    "code": "TV-RKU-HD",
+    "stock": 50
   }
 ]

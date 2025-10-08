@@ -11,12 +11,6 @@
   <button type="submit">Agregar</button>
 </form>
 
-<h2>Eliminar producto</h2>
-<form id="deleteForm">
-  <input type="text" name="id" placeholder="ID del producto" required />
-  <button type="submit">Eliminar</button>
-</form>
-
 <h2>Lista actualizada</h2>
 <ul id="productList">
   {{#each products}}
@@ -26,6 +20,8 @@
       <em>{{this.description}}</em>  
       <br />
       Código: {{this.code}} | Stock: {{this.stock}} | ID: {{this.id}}
+      <br />
+      <button class="btn delete-btn" data-id="{{this.id}}">🗑️ Eliminar</button>
     </li>
   {{/each}}
 </ul>
