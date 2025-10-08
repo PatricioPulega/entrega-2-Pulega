@@ -1,7 +1,6 @@
 const socket = io();
 socket.emit("testConexion");
 
-
 const addForm = document.getElementById("addForm");
 const deleteForm = document.getElementById("deleteForm");
 const productList = document.getElementById("productList");
@@ -37,7 +36,9 @@ socket.on("actualizarProductos", (products) => {
   document.querySelectorAll(".btnEliminar").forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("data-id");
-      socket.emit("eliminarProducto", id);
+      if (confirm("¿Estás seguro de que querés eliminar este producto?")) {
+        socket.emit("eliminarProducto", id);
+      }
     });
   });
 });

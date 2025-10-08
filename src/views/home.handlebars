@@ -10,7 +10,31 @@
       <p><strong>Código:</strong> {{this.code}}</p>
       <p><strong>Stock:</strong> {{this.stock}}</p>
       <p><strong>ID:</strong> {{this.id}}</p>
+      <button class="delete-btn" data-id="{{this.id}}">🗑️ Eliminar</button>
     </div>
   {{/each}}
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const deleteButtons = document.querySelectorAll(".delete-btn");
+
+    deleteButtons.forEach(button => {
+      button.addEventListener("click", async () => {
+        const id = button.getAttribute("data-id");
+        if (confirm("¿Eliminar este producto?")) {
+          try {
+            const response = await fetch(`/api/products/${id}`, {
+              method: "DELETE"
+            });
+            const result = await response.json();
+            alert(result.message);
+            location.reload(); // Recarga la vista para reflejar el cambio
+          } catch (error) {
+            alert("Error al eliminar el producto");
+          }
+        }
+      });
+    });
+  });
+</script>
